@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="dav" class="org.example.Dav">-->
+<!--    <property name="laptop" ref="lap" > </property>-->
+<!--    </bean>-->
+<!--    <bean id="lap" class="org.example.Laptop"> </bean>-->
+<!--     The Above commented lines are for setter injection-->
+
+<!--    <bean id="dav" class="org.example.Dav">-->
+<!--        <constructor-arg ref="lap"/>-->
+<!--    </bean>-->
+<!--    The Above is Constructor Injection.-->
+<!--    <bean id="dav" class="org.example.Dav" autowire="byName">-->
+<!--    </bean>-->
+<!--    <bean id="comp" class="org.example.Laptop">-->
+<!--    </bean>-->
+<!--    <bean id="desk1" class="org.example.Desktop">-->
+<!--    </bean>-->
+<!--    The above is the Autowire by name -->
+    <bean id="dav" class="org.example.Dav" autowire="byType">
+    </bean>
+    <bean id="lap" class="org.example.Laptop" primary="true">
+    </bean>
+    <bean id="desk" class="org.example.Desktop" primary="false">
+
+    </bean>
+</beans>
